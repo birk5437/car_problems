@@ -5,6 +5,9 @@ BarebonesRails4App::Application.routes.draw do
   resources :user_sessions
   resources :welcome, :only => :index
 
+  resources :car_makes
+  resources :car_problems
+
   root to: 'welcome#index'
 
   match '/login',  :via => :get, :to => 'user_sessions#new'
